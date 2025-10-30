@@ -62,4 +62,4 @@ npm run dev
 
 Access: http://localhost:5173/ in your browser!
 
-![Architecture](https://ik.imagekit.io/fredsrocha/github/rp/built-in-ai-2025/webpage.png?updatedAt=1761856649970)
+![Website](https://ik.imagekit.io/fredsrocha/github/rp/built-in-ai-2025/webpage.png?updatedAt=1761864491834)
