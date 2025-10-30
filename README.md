@@ -39,4 +39,27 @@ _Simplify your day. Focus on what matters._
 
 This project is licensed under the **Apache-2.0** license. See the [LICENSE](LICENSE) file for more details.
 
+## 🚀 Run this code
+
+Create a project in Firebase AI Logic and add your web app's settings in a .env file.
+
+```bash
+VITE_FIREBASE_API_KEY=""
+VITE_FIREBASE_AUTH_DOMAIN=""
+VITE_FIREBASE_PROJECT_ID=""
+VITE_FIREBASE_STORAGE_BUCKET=""
+VITE_FIREBASE_MESSAGING_SENDER_ID=""
+VITE_FIREBASE_APP_ID=""
+```
+
+```bash
+npm install
+```
+
+```bash
+npm run dev
+```
+
+Access: http://localhost:5173/ in your browser!
+
 ![Architecture](https://ik.imagekit.io/fredsrocha/github/rp/built-in-ai-2025/webpage.png?updatedAt=1761856649970)
