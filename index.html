@@ -1,0 +1,152 @@
+<!--
+  Copyright 2025 Fred Rocha
+  SPDX-License-Identifier: Apache-2.0
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AURA: Time Flowing With You</title>
+    <meta
+      name="description"
+      content="A multimodal intelligent assistant for scheduling tasks via audio or post-it note (image) using the Prompt API and Gemini Nano in Firebase AI Logic to ensure a hybrid user experience, processing data locally or in the cloud"
+    />
+    <link rel="shortcut icon" href="/favicon.ico" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <img src="icon.png" alt="AURA: Time Flowing With You Icon" />
+        <h1>AURA: <em>Time Flowing With You...</em></h1>
+      </header>
+
+      <h2>Problem</h2>
+      <p>
+        The challenge is the disorganization and cognitive overload I face when
+        dealing with multiple daily commitments. Today, traditional calendar
+        applications require the user to manually enter every detail, which can
+        be laborious and unintuitive.
+      </p>
+
+      <h2>Solution</h2>
+      <p>
+        A multimodal intelligent assistant for scheduling tasks via audio or
+        post-it note (image) using the Prompt API and Gemini Nano in Firebase AI
+        Logic to ensure a hybrid user experience, processing data locally or in
+        the cloud.
+      </p>
+
+      <h2>Architecture</h2>
+      <p>
+        <img
+          src="architecture.png"
+          width="50%"
+          alt="Aura: AI Agent Architecture"
+        />
+        <br />
+        <strong>#WebApplication</strong>
+        <strong>#MultimodalAIApplication</strong>
+        <strong>#HybridAIApplication</strong>
+      </p>
+
+      <p>
+        <a href="https://github.com/FredSRocha/Built_In_AI"
+          >👉 Learn more on GitHub</a
+        >
+      </p>
+
+      <!-- Task Input Section -->
+      <section class="input-section">
+        <h2>Add New Task</h2>
+        <div class="input-methods">
+          <!-- Text Input -->
+          <div class="input-method">
+            <label for="taskText">Text Description:</label>
+            <p>
+              <b>To test:</b>
+              <br />
+              Go grocery shopping, October 30st, 2025, at 02:00 p.m
+            </p>
+            <input
+              type="text"
+              id="taskText"
+              placeholder="Describe your task..."
+            />
+            <button type="button" id="analyzeText">Analyze Text</button>
+            <small>Response from: <span id="textSource">N/A</span></small>
+            <pre id="textResponse"></pre>
+          </div>
+
+          <!-- Audio Input -->
+          <div class="input-method">
+            <label for="audioFile">Audio Analyze:</label>
+            <p>
+              <b>To test:</b>
+              <br />
+              <a href="audio.mp3" download
+                >Download: The boss is reviewing the agenda with you (MP3)</a
+              >
+            </p>
+            <input type="file" id="audioFile" accept="audio/*" />
+            <small>Response from: <span id="audioSource">N/A</span></small>
+            <pre id="audioResponse"></pre>
+          </div>
+
+          <!-- Image Input -->
+          <div class="input-method">
+            <label for="imageFile">Image Analyze:</label>
+            <p>
+              <b>To test:</b>
+              <br />
+              <img
+                src="post-it.png"
+                width="256px"
+                alt="Post-It Example for test"
+              />
+            </p>
+            <input type="file" id="imageFile" accept="image/*" />
+            <small>Response from: <span id="imageSource">N/A</span></small>
+            <pre id="imageResponse"></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Task List Section -->
+      <section class="tasks-section">
+        <h2>Schedule Task's</h2>
+        <div id="todayDate" class="tasks-date"></div>
+        <div class="tasks-header">
+          <span>Date/Time</span>
+          <span>Task</span>
+          <span>Actions</span>
+        </div>
+        <div id="tasksList" class="tasks-list">
+          <!-- Tasks will be dynamically populated here -->
+        </div>
+      </section>
+
+      <!-- Conflict Resolution Section -->
+      <section class="conflict-section">
+        <h2>AI Conflict Resolution</h2>
+        <p>
+          When AI identifies date/time conflicts in tasks, it acts autonomously
+          and determines the best time without human intervention. Example: If
+          the task: "Take my cat to get vaccinated at 11 am" is added, but there
+          is a scheduled business meeting, then this appointment is registered
+          at a different time.
+        </p>
+
+        <div id="conflictStatus" class="conflict-status">
+          No conflicts detected
+        </div>
+      </section>
+      <footer>
+        <p>&copy; 2025 Proudly developed with the Gemini 2.5 Pro ❤️</p>
+      </footer>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
